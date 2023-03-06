@@ -1,0 +1,68 @@
+{
+  "settings": {
+    "index" : {
+      "max_result_window" : "999999"
+    }
+  }, 
+  "mappings": {
+    "properties": {
+      "domain": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "id": {
+        "type": "keyword"
+      },
+      "source": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "title": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "text": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "textAuto": {
+        "type": "search_as_you_type"
+      },
+      "uri": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "video_join": { 
+        "type": "join",
+        "relations": {
+          "video": "description" 
+        }
+      }
+    }
+  }
+}

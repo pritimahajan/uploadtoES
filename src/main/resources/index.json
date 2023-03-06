@@ -1,0 +1,18 @@
+PUT video_index/_doc/smjfGmCn7x0
+{
+  "domain": "youtube.com",
+  "source": "youtube",
+  "uri": "/watch?v=",
+  "id": "smjfGmCn7x0",
+  "title": "Memories: Dr. APJ Abdul Kalam's speech at European Union",
+  "video_join" : "video"
+}
+
+PUT video_index/_doc/3?routing=smjfGmCn7x0&refresh 
+{
+  "text": "0.00==recent gentlemen I'm indeed delighted to",
+  "video_join": {
+    "name": "description", 
+    "parent": "smjfGmCn7x0" 
+  }
+}

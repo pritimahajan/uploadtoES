@@ -1,0 +1,55 @@
+GET video_index/_search
+
+
+GET video_index/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "has_child": {
+            "type": "description",
+            "query": {
+              "multi_match": {
+                "query": "the Marais yab",
+                "fields": ["text"],
+                "type": "bool_prefix"
+              }
+            },
+            "inner_hits": {
+              "from" : 1,
+              "size" : 1,
+              "_source": "text"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+
+GET video_index/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "query_string": {
+            "query": "the Marais yab",
+            "fields": ["textAuto","textAuto._2gram","textAuto._3gram"],
+            "type": "phrase_prefix"
+          }
+        }
+      ]
+    }
+  },
+  "_source": ["textAuto"], 
+  "highlight": {
+    "fields": {
+      "textAuto": {},
+      "textAuto._2gram": {"pre_tags": ["<font color=\"red\">", "<font color=\"blue\">"],
+       "post_tags": ["</font>", "</font>"]},
+      "textAuto._3gram" :{}
+    }
+  }
+}
