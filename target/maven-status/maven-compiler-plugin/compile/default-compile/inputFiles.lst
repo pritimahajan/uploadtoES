@@ -1,8 +1,10 @@
 /Users/A325182/repos2/uploadtoES/src/main/java/com/javatab/springelasticdemo/api/APIController.java
 /Users/A325182/repos2/uploadtoES/src/main/java/com/javatab/springelasticdemo/model/Routing.java
+/Users/A325182/repos2/uploadtoES/src/main/java/com/javatab/springelasticdemo/api/HomeController.java
 /Users/A325182/repos2/uploadtoES/src/main/java/com/javatab/springelasticdemo/SpringElasticApplication.java
 /Users/A325182/repos2/uploadtoES/src/main/java/com/javatab/springelasticdemo/configuration/ClientConfig.java
 /Users/A325182/repos2/uploadtoES/src/main/java/com/javatab/springelasticdemo/model/Meta.java
+/Users/A325182/repos2/uploadtoES/src/main/java/com/javatab/springelasticdemo/configuration/OpenApiConfig.java
 /Users/A325182/repos2/uploadtoES/src/main/java/com/javatab/springelasticdemo/service/APIService.java
 /Users/A325182/repos2/uploadtoES/src/main/java/com/javatab/springelasticdemo/model/Video.java
 /Users/A325182/repos2/uploadtoES/src/main/java/com/javatab/springelasticdemo/model/DataIndexResponse.java
